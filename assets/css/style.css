@@ -104,3 +104,9 @@ section.button_container {
 	color: white;
 	transform: scale(1.1);
 }
+section.timer {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 20px;
+	color: white
+  }
