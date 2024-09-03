@@ -69,9 +69,9 @@ function generarNumeroAleatorio() {
 
 function iniciarTemporizador() {
   setInterval(() => {
-    tiempoRestante--; 
+
     contadorDisplay.textContent = tiempoRestante; 
-    
+    tiempoRestante--; 
     if (tiempoRestante <= 0) {
       generarCartaAleatoria(); 
     }
