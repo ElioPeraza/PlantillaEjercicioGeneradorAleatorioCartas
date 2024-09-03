@@ -1,6 +1,6 @@
 window.onload = () => {
   generarCartaAleatoria();
-  iniciarTemporizador();
+  iniciarTemporizador(); 
 };
 
 let Number = ['A', 'K', 'Q', 'J', '10', '9', '8', '7', '6', '5', '4', '3', '2'];
@@ -10,6 +10,7 @@ let boton_cargar_carta = document.querySelector('.button_new_card');
 let card_body = document.querySelector('section.number');
 let contadorDisplay = document.getElementById('contador');
 let tiempoRestante = 10;
+let card_width = document.querySelector('.card')
 
 boton_cargar_carta.addEventListener('click', () => {
   generarCartaAleatoria();
@@ -76,4 +77,19 @@ function iniciarTemporizador() {
       generarCartaAleatoria(); 
     }
   }, 1000); 
+}
+
+
+function cambioDeTamano(cambio) {
+
+  let cambioWidth = parseInt(window.getComputedStyle(card).width,10);
+  let cambioHeight = parseInt(window.getComputedStyle(card).height,10);
+
+  if (cambio === 'increase') {
+    card_width.style.width = (cambioWidth + 10) + 'px';
+    card_width.style.height = (cambioHeight + 10) + 'px';
+  } else if (cambio === 'decrease') {
+    card_width.style.width = (cambioWidth - 10) + 'px';
+    card_width.style.height = (cambioHeight - 10) + 'px';
+  }
 }
