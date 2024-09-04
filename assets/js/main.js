@@ -82,8 +82,8 @@ function iniciarTemporizador() {
 
 function cambioDeTamano(cambio) {
 
-  let cambioWidth = parseInt(window.getComputedStyle(card).width,10);
-  let cambioHeight = parseInt(window.getComputedStyle(card).height,10);
+  let cambioWidth = parseInt(window.getComputedStyle(card).width);
+  let cambioHeight = parseInt(window.getComputedStyle(card).height);
 
   if (cambio === 'increase') {
     card_width.style.width = (cambioWidth + 10) + 'px';
